@@ -1,0 +1,17 @@
+package: github.com/sniperkit/xmq
+import:
+- package: github.com/Shopify/sarama
+- package: github.com/gorilla/mux
+- package: github.com/streadway/amqp
+- package: github.com/urfave/negroni
+- package: github.com/wvanbergen/kafka
+  subpackages:
+  - consumergroup
+- package: gopkg.in/yaml.v2
+testImport:
+- package: github.com/magiconair/properties
+  subpackages:
+  - assert
+- package: github.com/stretchr/testify
+  subpackages:
+  - assert
