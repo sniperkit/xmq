@@ -1,0 +1,12 @@
+input:
+  type: nats
+  nats:
+    urls:
+    - nats://localhost:4222
+    subject: benthos_messages
+output:
+  type: nats
+  nats:
+    urls:
+    - nats://localhost:4222
+    subject: benthos_messages
