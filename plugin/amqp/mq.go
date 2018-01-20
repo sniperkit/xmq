@@ -1,5 +1,5 @@
 // Package mq wrap the github.com/streadway/amqp library to be able to mock it.
-package xamqp
+package amqp
 
 import (
 	"encoding/json"

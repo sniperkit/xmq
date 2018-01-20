@@ -1,4 +1,4 @@
-package xamqp
+package amqp
 
 // MessageQueue interface help masking the complexity of the amqp library
 // and reduce them to the needs of this project. The interface helps testing
