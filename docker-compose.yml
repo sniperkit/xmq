@@ -1,0 +1,23 @@
+version: "2"
+services:
+  influxdb:
+    environment:
+      - INFLUXDB_DB=cryptounicorns
+    image: influxdb
+    volumes:
+      - ./influxdb.conf:/etc/influxdb/influxdb.conf:ro
+    ports:
+      - 8086:8086
+
+  gluttony:
+    image: gluttony
+    build: .
+    volumes:
+      - ./config.json:/etc/gluttony/config.json:ro
+      - ./tickers.json:/var/gluttony/tickers.json:ro
+    command: >-
+      /usr/bin/gluttony
+      --config /etc/gluttony/config.json
+      --debug
+    links:
+      - influxdb:influxdb
